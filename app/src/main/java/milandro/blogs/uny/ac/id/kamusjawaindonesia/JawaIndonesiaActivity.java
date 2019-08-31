@@ -63,7 +63,9 @@ public class JawaIndonesiaActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                listChanger(cariJawa.getText().toString());
+                String referenceText = cariJawa.getText().toString();
+                referenceText = referenceText.replaceAll("'","");
+                listChanger(referenceText);
             }
 
             @Override
